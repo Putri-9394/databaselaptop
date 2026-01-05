@@ -18,7 +18,7 @@ CORS(app)
 # ==========================
 # Masukkan Connection String dari Supabase (Settings > Database > Connection String > URI)
 # Di Railway, masukkan nilai ini ke Variable: DATABASE_URL
-DB_URL = os.environ.get('DATABASE_URL', 'postgresql://postgres.hnjraytlxloscngqwjth:ntKvwNBuaURx3Z*@aws-1-ap-south-1.pooler.supabase.com:6543/postgres')
+DB_URL = os.environ.get('DATABASE_URL')
 
 def log(msg):
     print(f"[{datetime.datetime.now().strftime('%H:%M:%S')}] 🔹 {msg}")
@@ -120,3 +120,4 @@ if __name__ == '__main__':
     port = int(os.environ.get("PORT", 5000))
 
     app.run(host='0.0.0.0', port=port)
+
